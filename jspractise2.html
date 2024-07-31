@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Voter Eligibility:</h3>
+    <input type="text" placeholder="Enter Age" id="age" maxlength="2" />
+    <input type="text" placeholder="Enter Born Year" id="bornYear" maxlength="4" />
+   <button onclick="checkE()">Check</button>
+
+   <br/> <br/> <br/> <br/>
+    <h3>Student Results: </h3>
+   <input type="text" placeholder="Telugu" id="a" maxlength="3"/>
+   <input type="text" placeholder="English" id="b" maxlength="3" />
+   <input type="text" placeholder="Maths" id="c" maxlength="3" />
+   <input type="text" placeholder="Science" id="d" maxlength="3" />
+   <input type="text" placeholder="Social" id="e" maxlength="3" />
+   <button onclick="results()">Results</button>
+   <h3 id="display">GET YOUR MARKS HERE</h3>
+
+    
+    <script>
+        function checkE() {
+            let x = document.getElementById("age").value;
+            let y = document.getElementById("bornYear").value;
+
+            let xValue = parseInt(x);
+            let yValue = parseInt(y);
+
+            const ageCheck = xValue >=18;
+            alert ("Entered Age is : " + ageCheck)
+
+            const yearCheck = yValue <= 2006;
+            alert ("Entered Year is : " + yearCheck)
+
+            const Eligibility = xValue >= 18 && 2024 - yValue == xValue;
+            alert ("Your Eligibilty Status is : " + Eligibility)
+        }
+
+        function results() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+            let d = document.getElementById("d").value;
+            let e = document.getElementById("e").value;
+            
+            let telugu = parseInt(a);
+            let english = parseInt(b);
+            let maths = parseInt(c);
+            let science = parseInt(d);
+            let social = parseInt(e);
+
+            const total = telugu + english + maths + science + social;
+            document.getElementById("display").innerHTML=("Your Total Marks : " + total)
+            
+            const teluguMarks = telugu >= 35 && telugu <= 100;
+            alert ("Telugu Subject Result is : " + teluguMarks)
+
+            const englishMarks = english >= 35 && english <= 100;
+            alert ("English Subject Result is : " + englishMarks)
+
+            const mathsMarks = maths >= 35 && maths <= 100;
+            alert ("Maths Subject Result is : " + mathsMarks)
+
+            const scienceMarks = science >= 35 && science <= 100;
+            alert ("Science Subject Result is : " + scienceMarks)
+
+            const socialMarks = social >= 35 && social <= 100;
+            alert ("Social Subject Result is : " + socialMarks)
+
+            const finalResult = telugu>=35 && english >=35 && maths >= 35 && science >= 35 && social >= 35 && total >=175 ;
+            alert ("Your Final Result is : " + finalResult)
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-image: url("./images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.container {
+    width: 600px;
+    background-color: #f3f4f4;
+    border-radius: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: #1864b0 8px solid;
+}
+
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: none;
+    border-radius: 16px 16px 0 0;
+    padding: 10px 0 ;
+    margin-top: 16px;
+}
+
+button:hover {
+background-color: #2065ce;
+border: none;
+}
+
+
+#result {
+    border: 1px solid #ccc;
+    background-color: #ebeaea;
+    color: #353535;
+    border-radius: 0 0 16px 16px;
+}
